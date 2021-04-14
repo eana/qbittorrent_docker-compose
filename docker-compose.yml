@@ -1,0 +1,25 @@
+---
+version: "3.7"
+services:
+  proftpd:
+    build: github.com/eana/docker-proftpd
+    container_name: qbt_proftpd
+    ports:
+      - 20-21:20-21
+      - 21000-21020:21000-21020
+    network_mode: host
+    restart: always
+  qbittorrent:
+    image: linuxserver/qbittorrent:14.3.4.99202104090418-7349-789803700ubuntu20.04.1-ls126
+    container_name: qbt_qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Stockholm
+      - UMASK_SET=022
+      - WEBUI_PORT=8110
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8110:8110
+    restart: always
