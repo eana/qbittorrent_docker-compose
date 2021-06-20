@@ -10,7 +10,7 @@ services:
     network_mode: host
     restart: always
   qbittorrent:
-    image: linuxserver/qbittorrent:14.3.4.99202104090418-7349-789803700ubuntu20.04.1-ls126
+    image: linuxserver/qbittorrent:version-14.3.5.99202106191735-7376-e25948e73ubuntu20.04.1
     container_name: qbt_qbittorrent
     environment:
       - PUID=1000
