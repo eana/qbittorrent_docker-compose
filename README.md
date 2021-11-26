@@ -1,11 +1,10 @@
 qbittorrent docker-compose
 ==========================
 
-This micro-repo is used only as a host for an easily hostable
-[qbittorrent](https://www.qbittorrent.org/). We don't want qbittorrent
-to be accessible on all interfaces on the server, hence is limited to the
-`docker0` interface. On the host machine qbittorrent will be accessible on
-`172.17.0.1:8110`.
+This micro-repo is used only as a host for an easily hostable [qbittorrent]. We
+don't want qbittorrent to be accessible on all interfaces on the server, hence
+is limited to the `docker0` interface. On the host machine qbittorrent will be
+accessible on `172.17.0.1:8110`.
 
 To access qbittorrent from outside you should have a reverse proxy in front of
 it.
@@ -61,4 +60,5 @@ committing secrets to this repository. However, if you don't need to commit
 these credentials, you could just combine the `docker-compose.yml` and
 `docker-compose.secrets.yml` into one file.
 
+[qbittorrent]:https://www.qbittorrent.org
 [proftpd]:https://github.com/eana/docker-proftpd
