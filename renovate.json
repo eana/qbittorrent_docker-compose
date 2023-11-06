@@ -1,6 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "local>bolawell/renovate-config"
+  "extends": ["github>bolawell/renovate-config"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["linuxserver/docker-qbittorrent"],
+      "allowedVersions": "!/\\d+.[2-3].\\d+.\\d{14}-\\d{4}-.*ubuntu.*-ls\\d+$/"
+    }
   ]
 }
